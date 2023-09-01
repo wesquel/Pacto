@@ -55,3 +55,19 @@
 | `conta_id` | `Long`   | `body`      | Número de conta. | Sim         |
 | `tipo_operacao_id` | `Long`   | `body`      | Número da operação. | Sim         |
 | `valor` | `Double`   | `body`      | Valor da Transação. | Sim         |
+
+
+## Estrutura de dados sugerida
+
+
+![image](https://github.com/wesquel/Pacto/assets/51407794/ac039f80-94f6-49fe-a630-c16aa70b73eb)
+
+![image](https://github.com/wesquel/Pacto/assets/51407794/3f018289-cda7-4f4f-869d-e3e33adde4a2)
+
+![image](https://github.com/wesquel/Pacto/assets/51407794/c6bf6111-9321-46b6-920e-43221ed983e6)
+
+![image](https://github.com/wesquel/Pacto/assets/51407794/feb32915-fa12-4a8f-9efe-7ee7390e1c8f)
+
+
+
+
