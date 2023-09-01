@@ -30,6 +30,9 @@ public class TransacaoService {
     @Autowired
     private TransacaoRepository transacaoRepository;
 
+    @Autowired
+    private LimiteContaService limiteContaService;
+
     public ResponseEntity<?> createTransacao(TransacaoRequest transacaoRequest) {
         Transacao transacao = new Transacao();
 
@@ -72,8 +75,12 @@ public class TransacaoService {
 
         transacao.setDataTransacao(LocalDateTime.now());
         transacaoRepository.save(transacao);
-
         TransacaoResponse transacaoResponse = transacaoToResponse(transacao);
+
+        if(!limiteContaService.alterLimite(transacao)){
+            return ResponseEntity.badRequest().body("Rejected!");
+        }
+
         return ResponseEntity.status(HttpStatus.CREATED).body(transacaoResponse);
     }
 
